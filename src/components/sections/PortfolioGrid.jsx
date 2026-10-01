@@ -48,9 +48,9 @@ const PortfolioGrid = () => {
           </div>
         </motion.div>
         
-        {/* Responsive Grid for 4 projects with staggered animation and hover effects */}
+        {/* Responsive Grid with staggered animation and hover effects */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -64,12 +64,11 @@ const PortfolioGrid = () => {
               transition={{ duration: 0.25 }}
               className="flex flex-col group p-2 -m-2 rounded-xl transition-all duration-300"
             >
-              <div className="bg-[#f0ece1] h-64 rounded-lg overflow-hidden mb-6 flex items-center justify-center shadow-sm group-hover:shadow-xl group-hover:shadow-textPrimary/10 transition-all duration-500">
-                {/* Image scaling aur sharpness ke liye CSS update kar di gayi hai */}
+              <div className="bg-[#f0ece1] h-80 rounded-lg overflow-hidden mb-6 flex items-center justify-center p-3 shadow-sm group-hover:shadow-xl group-hover:shadow-textPrimary/10 transition-all duration-500">
                 <img 
                   src={project.imagePlaceholder} 
                   alt={project.title} 
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-108 [image-rendering:-webkit-optimize-contrast]"
+                  className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-105 [image-rendering:-webkit-optimize-contrast]"
                   onError={(e) => {
                     e.target.style.display = 'none'; // Hide broken image icon if image is missing
                   }}

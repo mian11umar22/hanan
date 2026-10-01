@@ -56,5 +56,12 @@ export const portfolioProjects = [
     description: "Comprehensive print copy that distills complex organizational missions into clear, digestible, and inspiring offline formats.",
     imagePlaceholder: brochuresMockup, 
     documentLink: "https://docs.google.com/document/d/1rR7-KI4v8IUUjDjTtu_zgzwJlqFkaa58ZqCkyNq6XDg/edit?tab=t.8lahfhfiags0"
+  },
+  {
+    id: 5,
+    title: "Social Media Ads",
+    description: "High-ROAS paid ad copy focusing on urgency, empathy, and clear calls-to-action for global emergency and empowerment campaigns.",
+    imagePlaceholder: "/src/assets/ads-mockup.png", 
+    documentLink: "https://docs.google.com/document/d/1UDrwzl-O32S3LiT-3Kmj2GNOzFfrJuf1mdu20_qMVxs/edit?tab=t.xqpzf4osfcmw"
   }
 ];

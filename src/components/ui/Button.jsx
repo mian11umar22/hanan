@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Button = ({ children, href, variant = 'primary', className = '', type = 'submit' }) => {
+const Button = ({ children, href, variant = 'primary', className = '', type = 'submit', target, rel, ...props }) => {
   const baseStyle = "px-6 py-3 rounded-full font-medium inline-flex items-center justify-center cursor-pointer select-none transition-all duration-300";
   const variants = {
     primary: "bg-accent text-white hover:bg-[#a25a3a] shadow-sm hover:shadow-lg hover:shadow-accent/30",
@@ -14,12 +14,13 @@ const Button = ({ children, href, variant = 'primary', className = '', type = 's
     return (
       <motion.a
         href={href}
-        target={isInternal ? undefined : "_blank"}
-        rel={isInternal ? undefined : "noopener noreferrer"}
+        target={target !== undefined ? target : (isInternal ? undefined : "_blank")}
+        rel={rel !== undefined ? rel : (isInternal ? undefined : "noopener noreferrer")}
         whileHover={{ y: -2, scale: 1.02 }}
         whileTap={{ y: 0, scale: 0.98 }}
         transition={{ duration: 0.2, ease: "easeOut" }}
         className={`${baseStyle} ${variants[variant]} ${className}`}
+        {...props}
       >
         {children}
       </motion.a>
@@ -28,11 +29,12 @@ const Button = ({ children, href, variant = 'primary', className = '', type = 's
 
   return (
     <motion.button
-      type="button"
+      type={type}
       whileHover={{ y: -2, scale: 1.02 }}
       whileTap={{ y: 0, scale: 0.98 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
       className={`${baseStyle} ${variants[variant]} ${className}`}
+      {...props}
     >
       {children}
     </motion.button>

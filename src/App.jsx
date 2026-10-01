@@ -3,6 +3,7 @@ import Navbar from './components/sections/Navbar';
 import Hero from './components/sections/Hero';
 import TrustedLogos from './components/sections/TrustedLogos';
 import Philosophy from './components/sections/Philosophy';
+import CampaignResults from './components/sections/CampaignResults';
 import PortfolioGrid from './components/sections/PortfolioGrid';
 import Contact from './components/sections/Contact';
 
@@ -14,6 +15,7 @@ function App() {
         <Hero />
         <TrustedLogos />
         <Philosophy />
+        <CampaignResults />
         <PortfolioGrid />
         <Contact />
       </main>
